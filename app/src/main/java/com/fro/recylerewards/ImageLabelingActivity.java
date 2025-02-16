@@ -50,7 +50,7 @@ public class ImageLabelingActivity extends AppCompatActivity {
 
         labelImageBtn.setOnClickListener(v ->labelImage(bitmap));
 
-        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CameraActivity.class)));
     }
 
     private void  labelImage(Bitmap bitmap){

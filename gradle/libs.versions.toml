@@ -1,5 +1,6 @@
 [versions]
 agp = "8.8.0"
+cameraCamera2 = "1.4.1"
 googlePlayServicesMlkitImageLabeling = "16.0.8"
 imageLabeling = "17.0.9"
 junit = "4.13.2"
@@ -12,6 +13,9 @@ constraintlayout = "2.2.0"
 cameraCore = "1.4.1"
 
 [libraries]
+camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCamera2" }
+camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraCamera2" }
+camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraCamera2" }
 google-play-services-mlkit-image-labeling = { module = "com.google.android.gms:play-services-mlkit-image-labeling", version.ref = "googlePlayServicesMlkitImageLabeling" }
 image-labeling = { module = "com.google.mlkit:image-labeling" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
