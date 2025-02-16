@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.camera.core.CameraSelector;
 import androidx.camera.core.ImageCapture;
 import androidx.camera.core.ImageCaptureException;
+import androidx.camera.core.ImageProxy;
 import androidx.camera.core.Preview;
 import androidx.camera.lifecycle.ProcessCameraProvider;
 import androidx.camera.view.PreviewView;
@@ -12,6 +13,7 @@ import androidx.core.content.ContextCompat;
 import androidx.lifecycle.LifecycleOwner;
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
@@ -81,23 +83,20 @@ public class CameraActivity extends AppCompatActivity {
         contentValues.put(MediaStore.MediaColumns.DISPLAY_NAME, timestamp);
         contentValues.put(MediaStore.MediaColumns.MIME_TYPE, "image/jpeg");
 
-        imageCapture.takePicture(
-                new ImageCapture.OutputFileOptions.Builder(
-                        getContentResolver(),
-                        MediaStore.Images.Media.EXTERNAL_CONTENT_URI,
-                        contentValues
-                ).build(), getExecutor(),
-                new ImageCapture.OnImageSavedCallback() {
-                    @Override
-                    public void onImageSaved(@NonNull ImageCapture.OutputFileResults outputFileResults) {
-                        Toast.makeText(CameraActivity.this, "Photo has been saved successfully.", Toast.LENGTH_SHORT).show();
-                    }
+        imageCapture.takePicture(getExecutor(),
+            new ImageCapture.OnImageCapturedCallback() {
+            @Override
+            public void onCaptureSuccess(@NonNull ImageProxy image) {
+                super.onCaptureSuccess(image);
+                Values.image = image;
+                Toast.makeText(CameraActivity.this, "Photo has been captured successfully.", Toast.LENGTH_SHORT).show();
+                startActivity(new Intent(getApplicationContext(), ImageLabelingActivity.class));
+            }
 
-                    @Override
-                    public void onError(@NonNull ImageCaptureException exception) {
-                        Toast.makeText(CameraActivity.this, "Error saving photo: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
-                    }
-                }
-        );
+            @Override
+            public void onError(@NonNull ImageCaptureException exception) {
+                Toast.makeText(CameraActivity.this, "Error saving photo: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }

@@ -2,13 +2,21 @@ package com.fro.recylerewards;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.Matrix;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.camera.core.ImageProxy;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -19,13 +27,15 @@ import com.google.mlkit.vision.label.ImageLabeler;
 import com.google.mlkit.vision.label.ImageLabeling;
 import com.google.mlkit.vision.label.defaults.ImageLabelerOptions;
 
+import java.io.ByteArrayOutputStream;
+import java.nio.ByteBuffer;
 import java.util.List;
 
 public class ImageLabelingActivity extends AppCompatActivity {
     // Declare global variables here \/
-    private ImageView imageIv;
-    private MaterialButton labelImageBtn;
-    private TextView resultTv;
+    ImageView imageIv;
+    MaterialButton labelImageBtn;
+    TextView resultTv;
     Button button;
 
     private ImageLabeler imageLabeler;
@@ -41,16 +51,17 @@ public class ImageLabelingActivity extends AppCompatActivity {
         resultTv = findViewById(R.id.resultTv);
         button = findViewById(R.id.back);
 
-
         imageLabeler = ImageLabeling.getClient(ImageLabelerOptions.DEFAULT_OPTIONS);
 
-        // Bitmap from ImageView
-        BitmapDrawable bitmapDrawable = (BitmapDrawable) imageIv.getDrawable();
-        Bitmap bitmap = bitmapDrawable.getBitmap();
+        // Bitmap from Values.image
+        Bitmap bitmap = rotateBitmap(Values.image.toBitmap(), 90);
+        Drawable bitmapDrawable = new BitmapDrawable(getResources(), bitmap);
+
+        imageIv.setImageDrawable(bitmapDrawable);
 
         labelImageBtn.setOnClickListener(v ->labelImage(bitmap));
 
-        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CameraActivity.class)));
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
     }
 
     private void  labelImage(Bitmap bitmap){
@@ -82,5 +93,12 @@ public class ImageLabelingActivity extends AppCompatActivity {
                         resultTv.setText(text);
                     }
                 });
+    }
+
+    public static Bitmap rotateBitmap(Bitmap source, float angle)
+    {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(angle);
+        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
     }
 }

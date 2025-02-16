@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
         // Instantiate variables here \/
         button = findViewById(R.id.next);
 
-        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ImageLabelingActivity.class)));
+        button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CameraActivity.class)));
     }
 
 }
