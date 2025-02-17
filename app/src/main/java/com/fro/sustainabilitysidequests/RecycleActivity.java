@@ -16,6 +16,7 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -27,9 +28,8 @@ import java.util.concurrent.Executor;
 
 
 public class RecycleActivity extends AppCompatActivity {
-
-    private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
-
+    // Declare global variables here \/
+    ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
     PreviewView camera;
     ImageCapture imageCapture;
     ImageButton takePic;
@@ -40,14 +40,16 @@ public class RecycleActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recycle);
 
+        // Instantiate variables here \/
         home = findViewById(R.id.home);
-        home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
-
         camera = findViewById(R.id.camera);
         takePic = findViewById(R.id.takePic);
 
+        //Setting on click listeners
+        home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
         takePic.setOnClickListener(v -> capturePhoto());
 
+        // Starting the camera
         cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(() -> {
             try {
@@ -59,10 +61,12 @@ public class RecycleActivity extends AppCompatActivity {
         }, getExecutor());
     }
 
+    //Gets the main executor of this activity
     Executor getExecutor() {
         return ContextCompat.getMainExecutor(this);
     }
 
+    // Function to start the camera
     private void startCameraX(ProcessCameraProvider cameraProvider) {
         cameraProvider.unbindAll();
         CameraSelector cameraSelector = new CameraSelector.Builder()
@@ -81,6 +85,7 @@ public class RecycleActivity extends AppCompatActivity {
         cameraProvider.bindToLifecycle((LifecycleOwner) this, cameraSelector, preview, imageCapture);
     }
 
+    // function to take the photo
     private void capturePhoto() {
         long timestamp = System.currentTimeMillis();
 
@@ -95,7 +100,9 @@ public class RecycleActivity extends AppCompatActivity {
                 super.onCaptureSuccess(image);
                 Values.image = image;
                 Toast.makeText(RecycleActivity.this, "Photo has been captured successfully.", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(getApplicationContext(), ImageLabelingActivity.class));
+                Intent intent = new Intent(getApplicationContext(), ImageLabelingActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                startActivity(intent);
             }
 
             @Override
