@@ -50,19 +50,18 @@
             android:orientation="vertical"
             android:layout_weight="5"
             android:weightSum="3">
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="180dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/alumni_sans_bold"
-                android:textSize="30sp"
-                android:text="@string/recycle_name"
-                android:layout_weight=".9"/>
+                android:src="@drawable/recycle_rush"
+                android:layout_weight=".8"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:fontFamily="@font/alumni_sans_regular"
                 android:textSize="20sp"
                 android:lineHeight="15sp"
+                android:textColor="@color/mid_green"
                 android:text="@string/main_page_2"
                 android:layout_weight="1.1"/>
             <Button
@@ -75,7 +74,7 @@
                 android:fontFamily="@font/alumni_sans_bold"
                 android:text="RECYCLE! →"
                 android:padding="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1.1"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -98,19 +97,18 @@
             android:orientation="vertical"
             android:layout_weight="5"
             android:weightSum="3">
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="120dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/alumni_sans_bold"
-                android:textSize="30sp"
-                android:text="@string/quest_log_name"
-                android:layout_weight=".9"/>
+                android:src="@drawable/quest_log"
+                android:layout_weight=".8"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:fontFamily="@font/alumni_sans_regular"
                 android:textSize="20sp"
                 android:lineHeight="15sp"
+                android:textColor="@color/mid_green"
                 android:text="@string/main_page_3"
                 android:layout_weight="1.1"/>
             <Button
@@ -123,7 +121,7 @@
                 android:fontFamily="@font/alumni_sans_bold"
                 android:text="LEARN! →"
                 android:padding="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1.1"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -146,19 +144,18 @@
             android:orientation="vertical"
             android:layout_weight="5"
             android:weightSum="3">
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="230dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/alumni_sans_bold"
-                android:textSize="30sp"
-                android:text="@string/bot_name"
-                android:layout_weight=".9"/>
+                android:src="@drawable/sust_ai_nability"
+                android:layout_weight=".8"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:fontFamily="@font/alumni_sans_regular"
                 android:textSize="20sp"
                 android:lineHeight="15sp"
+                android:textColor="@color/mid_green"
                 android:text="@string/main_page_4"
                 android:layout_weight="1.1"/>
             <Button
@@ -171,7 +168,7 @@
                 android:fontFamily="@font/alumni_sans_bold"
                 android:text="CHAT! →"
                 android:padding="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1.1"/>
         </LinearLayout>
     </LinearLayout>
 
@@ -194,19 +191,18 @@
             android:orientation="vertical"
             android:layout_weight="5"
             android:weightSum="3">
-            <TextView
-                android:layout_width="match_parent"
+            <ImageView
+                android:layout_width="130dp"
                 android:layout_height="0dp"
-                android:fontFamily="@font/alumni_sans_bold"
-                android:textSize="30sp"
-                android:text="@string/rewards_name"
-                android:layout_weight=".9"/>
+                android:src="@drawable/rewards"
+                android:layout_weight=".8"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:fontFamily="@font/alumni_sans_regular"
                 android:textSize="20sp"
                 android:lineHeight="15sp"
+                android:textColor="@color/mid_green"
                 android:text="@string/main_page_5"
                 android:layout_weight="1.1"/>
             <Button
@@ -219,7 +215,7 @@
                 android:fontFamily="@font/alumni_sans_bold"
                 android:text="SHOP! →"
                 android:padding="0dp"
-                android:layout_weight="1"/>
+                android:layout_weight="1.1"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
