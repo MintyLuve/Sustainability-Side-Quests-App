@@ -11,7 +11,7 @@
     <string name="recycle_1">As you recycle, take photos of each item to earn points! If the AI detects that it is recycling, then the points get added to your total. The more you recycle, the more points you can earn!</string>
 
     <string name="quest_log_name">Quest Log</string>
-    <string name="quest_log_1">learn about the different aspects of sustainability and social justice and how they affect each other. Each quest rewards you with 100 points!</string>
+    <string name="quest_log_1">Learn about the different aspects of sustainability and social justice and how they affect each other. Each quest rewards you with 100 points!</string>
     <string name="quest_log_2">What is Sustainability?</string>
     <string name="quest_log_3">Trash VS Recycling</string>
     <string name="quest_log_4">Different Types of Plastic</string>
@@ -25,7 +25,7 @@
 
     <string name="bot_name">Sust.AI.nability</string>
     <string name="bot_1">Talk to our AI Chatbot for 10m to earn 100 points! You can chat about anything related to sustainability and social justice and how they affect each other.</string>
-    <string name="bot_2">(weekly chat not completed yet)</string>
+    <string name="bot_2">(Weekly chat not completed yet)</string>
     <string name="bot_3">Hello! I am your sust.AI.nability chat bot! What would you like to talk about today?</string>
 
 </resources>

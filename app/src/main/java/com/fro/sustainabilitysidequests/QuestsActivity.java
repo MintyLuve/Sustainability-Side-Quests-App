@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class QuestsActivity extends AppCompatActivity {
     // Declare global variables here \/
     Button home;
+    Button shop;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,10 @@ public class QuestsActivity extends AppCompatActivity {
 
         // Instantiate variables here \/
         home = findViewById(R.id.home);
+        shop = findViewById(R.id.shop);
 
+        // Changing pages
         home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        shop.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), ShopActivity.class)));
     }
 }
