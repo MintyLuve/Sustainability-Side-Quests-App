@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">Sustainability Side Quests</string>
 
-    <string name="main_page_1">Recycle and learn about sustainability to earn points! Then, exchange your points for the in-game currency of your favorite games. Don’t miss out on these free rewards!</string>
-    <string name="main_page_2">Use AI while taking photos of your day-to-day recycling To earn points!</string>
-    <string name="main_page_3">Learn about different ways sustainability affects you to earn points!</string>
-    <string name="main_page_4">Talk to our AI Chatbot about sustainability and social justice!</string>
-    <string name="main_page_5">Spend your points to earn in-game currency for your favorite video games!</string>
+    <string name="main_page_1">Recycle and learn about sustainability to earn points! exchange your points for in-game currency of your favorite games. Don’t miss out on these free rewards!</string>
+    <string name="main_page_2">Use our AI while taking photos of your\nday-to-day recycling to earn points!</string>
+    <string name="main_page_3">Learn about different ways\nsustainability affects you to earn points!</string>
+    <string name="main_page_4">Talk to our AI Chatbot about\nsustainability and social justice!</string>
+    <string name="main_page_5">Spend your points to earn in-game\ncurrency for your favorite video games!</string>
 
     <string name="recycle_name">Recycle Rush</string>
     <string name="recycle_1">As you recycle, take photos of each item to earn points! If the AI detects that it is recycling, then the points get added to your total. The more you recycle, the more points you can earn!</string>

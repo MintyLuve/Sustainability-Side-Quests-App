@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         // Instantiate variables here \/
-        button = findViewById(R.id.next);
+        button = findViewById(R.id.recycle);
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), CameraActivity.class)));
     }
