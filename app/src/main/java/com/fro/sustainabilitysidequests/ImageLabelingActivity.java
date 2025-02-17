@@ -92,7 +92,7 @@ public class ImageLabelingActivity extends AppCompatActivity {
                             //get confidence score in percentage
                             float confidence = imageLabel.getConfidence();
 
-                            resultT.append("Text: "+ text +"\n");
+                            resultT.append("Type: "+ text +"\n");
                             resultC.append("Confidence: "+ confidence +"\n");
                         }
                     }

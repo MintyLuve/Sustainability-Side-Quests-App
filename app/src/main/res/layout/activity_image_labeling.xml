@@ -46,7 +46,7 @@
             android:autoSizeTextType="uniform"
             android:fontFamily="@font/alumni_sans_regular"
             android:textColor="@color/mid_green"
-            android:text="text\naja\naa"
+            android:text="Type:\nType:\nType:"
             android:layout_weight="1"
             android:layout_marginEnd="5dp"/>
         <TextView
@@ -54,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:autoSizeTextType="uniform"
-            android:text="text\naja\naa"
+            android:text="Confidence:\nConfidence:\nConfidence:"
             android:fontFamily="@font/alumni_sans_regular"
             android:textColor="@color/mid_green"
             android:textAlignment="textEnd"
