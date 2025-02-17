@@ -51,7 +51,7 @@ public class ImageLabelingActivity extends AppCompatActivity {
 
         imageIv.setImageDrawable(bitmapDrawable);
 
-        labelImageBtn.setOnClickListener(v ->labelImage(bitmap));
+        labelImage(bitmap);
 
         button.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
     }

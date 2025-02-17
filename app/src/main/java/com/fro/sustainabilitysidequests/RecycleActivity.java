@@ -25,18 +25,22 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 
 
-public class CameraActivity extends AppCompatActivity {
+public class RecycleActivity extends AppCompatActivity {
 
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
     PreviewView previewView;
     ImageCapture imageCapture;
     Button bCapture;
+    Button home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera);
+        setContentView(R.layout.activity_recycle);
+
+        home = findViewById(R.id.home);
+        home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
 
         previewView = findViewById(R.id.previewView);
         bCapture = findViewById(R.id.bCapture);
@@ -89,13 +93,13 @@ public class CameraActivity extends AppCompatActivity {
             public void onCaptureSuccess(@NonNull ImageProxy image) {
                 super.onCaptureSuccess(image);
                 Values.image = image;
-                Toast.makeText(CameraActivity.this, "Photo has been captured successfully.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecycleActivity.this, "Photo has been captured successfully.", Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(getApplicationContext(), ImageLabelingActivity.class));
             }
 
             @Override
             public void onError(@NonNull ImageCaptureException exception) {
-                Toast.makeText(CameraActivity.this, "Error saving photo: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
+                Toast.makeText(RecycleActivity.this, "Error saving photo: " + exception.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

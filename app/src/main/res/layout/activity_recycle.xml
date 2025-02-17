@@ -5,7 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CameraActivity">
+    tools:context=".RecycleActivity"
+    android:background="@color/light_yellow">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,7 +22,7 @@
             android:id="@+id/previewView"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="9" />
+            android:layout_weight="8" />
 
         <Button
             android:id="@+id/bCapture"
@@ -31,7 +32,17 @@
             android:layout_gravity="center_horizontal"
             android:text="take picture"
             android:layout_weight="1"/>
-
+        <Button
+            android:id="@+id/home"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:backgroundTint="@color/mid_green"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/alumni_sans_bold"
+            android:text="← HOME"
+            android:padding="0dp"
+            android:layout_weight="1"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
