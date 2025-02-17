@@ -13,6 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class ShopActivity extends AppCompatActivity {
     // Declare global variables here \/
     Button home;
+    Button recycle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,10 @@ public class ShopActivity extends AppCompatActivity {
 
         // Instantiate variables here \/
         home = findViewById(R.id.home);
+        recycle = findViewById(R.id.recycle);
 
+        // Switching pages
         home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
+        recycle.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecycleActivity.class)));
     }
 }

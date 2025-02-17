@@ -6,16 +6,297 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ShopActivity"
+    android:background="@color/light_yellow"
     android:orientation="vertical"
-    android:background="@color/light_yellow">
-    <Button
-        android:id="@+id/home"
+    android:padding="20dp"
+    android:weightSum="8">
+
+    <ImageView
         android:layout_width="match_parent"
-        android:layout_height="40dp"
-        android:gravity="center"
-        android:backgroundTint="@color/mid_green"
+        android:layout_height="0dp"
+        android:layout_weight=".7"
+        android:src="@drawable/rewards"
+        android:layout_marginBottom="10dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fontFamily="@font/alumni_sans_regular"
         android:autoSizeTextType="uniform"
+        android:lineHeight="20sp"
+        android:text="@string/rewards_1"
+        android:textColor="@color/mid_green"
+        android:layout_weight="1.4"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@drawable/line"/>
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.6"
         android:fontFamily="@font/alumni_sans_bold"
-        android:text="← HOME"
-        android:padding="0dp"/>
+        android:autoSizeTextType="uniform"
+        android:textColor="@color/mid_green"
+        android:textAlignment="center"
+        android:text="You Have 1500 Points"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4"
+            android:layout_marginEnd="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/fortnite"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_regular"
+                android:textAlignment="center"
+                android:lineHeight="20sp"
+                android:text="100 pts = 70 V-Bucks"
+                android:textColor="@color/mid_green" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:backgroundTint="@color/mid_green"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_bold"
+                android:text="Log In To Exchange"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_weight="1.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/roblox"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_regular"
+                android:textAlignment="center"
+                android:lineHeight="20sp"
+                android:text="100 pts = 40 Robux"
+                android:textColor="@color/mid_green" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:backgroundTint="@color/mid_green"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_bold"
+                android:text="Log In To Exchange"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_weight="1.5"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:weightSum="2"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4"
+            android:layout_marginEnd="30dp">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/valorant"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_regular"
+                android:lineHeight="20sp"
+                android:text="100 pts = 48 VP"
+                android:textAlignment="center"
+                android:textColor="@color/mid_green" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:backgroundTint="@color/mid_green"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_bold"
+                android:text="Log In To Exchange"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_weight="1.5"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:weightSum="4">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:src="@drawable/league"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_regular"
+                android:lineHeight="20sp"
+                android:text="100 pts = 70 Riot Points"
+                android:textColor="@color/mid_green" />
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:gravity="center"
+                android:backgroundTint="@color/mid_green"
+                android:autoSizeTextType="uniform"
+                android:fontFamily="@font/alumni_sans_bold"
+                android:text="Log In To Exchange"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:paddingStart="5dp"
+                android:paddingEnd="5dp"
+                android:layout_weight="1.5"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.7">
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            app:tint="@color/mid_green"
+            android:src="@drawable/arrow_left"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/circle"
+            android:layout_marginEnd="20dp"
+            android:backgroundTint="@color/mid_green"
+            android:layout_gravity="center_vertical"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/circle"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/circle"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/circle"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+        <View
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/circle"
+            android:layout_marginEnd="20dp"
+            android:layout_gravity="center_vertical"/>
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            app:tint="@color/mid_green"
+            android:src="@drawable/arrow_right"
+            android:layout_gravity="center_vertical"/>
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:src="@drawable/line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight=".6"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <Button
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:backgroundTint="@color/mid_green"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/alumni_sans_bold"
+            android:text="← HOME"
+            android:padding="0dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="15dp"/>
+        <Button
+            android:id="@+id/recycle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:backgroundTint="@color/mid_green"
+            android:autoSizeTextType="uniform"
+            android:fontFamily="@font/alumni_sans_bold"
+            android:text="RECYCLE →"
+            android:padding="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="15dp"/>
+    </LinearLayout>
 </LinearLayout>

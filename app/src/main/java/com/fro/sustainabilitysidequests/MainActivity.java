@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         chat = findViewById(R.id.chat);
         shop = findViewById(R.id.shop);
 
+        // Changing pages
         recycle.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RecycleActivity.class)));
         learn.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), QuestsActivity.class)));
         chat.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), BotActivity.class)));
