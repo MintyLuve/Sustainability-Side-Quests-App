@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">GWC Recycle Rewards</string>
+    <string name="app_name">Sustainability Side Quests</string>
+
+    <string name="main_page_1">Recycle and learn about sustainability to earn points! Then, exchange your points for the in-game currency of your favorite games. Don’t miss out on these free rewards!</string>
+    <string name="main_page_2">Use AI while taking photos of your day-to-day recycling To earn points!</string>
+    <string name="main_page_3">Learn about different ways sustainability affects you to earn points!</string>
+    <string name="main_page_4">Talk to our AI Chatbot about sustainability and social justice!</string>
+    <string name="main_page_5">Spend your points to earn in-game currency for your favorite video games!</string>
+
+    <string name="recycle_name">Recycle Rush</string>
+    <string name="recycle_1">As you recycle, take photos of each item to earn points! If the AI detects that it is recycling, then the points get added to your total. The more you recycle, the more points you can earn!</string>
+
+    <string name="quest_log_name">Quest Log</string>
+    <string name="quest_log_1">learn about the different aspects of sustainability and social justice and how they affect each other. Each quest rewards you with 100 points!</string>
+    <string name="quest_log_2">What is Sustainability?</string>
+    <string name="quest_log_3">Trash VS Recycling</string>
+    <string name="quest_log_4">Different Types of Plastic</string>
+    <string name="quest_log_5">Why Recycle?</string>
+    <string name="quest_log_6">Landfills and Pollution</string>
+    <string name="quest_log_7">Minorities and Sustainability</string>
+    <string name="quest_log_8">Gender Ratio in Waste Management</string>
+
+    <string name="rewards_name">Rewards</string>
+    <string name="rewards_1">Time to use those points! We’ve partnered with the following games to help create a more sustainable future. Choose a game and log into your account to transfer your points. All conversion rates are based on the value of a $20 gift card.</string>
+
+    <string name="bot_name">Sust.AI.nability</string>
+    <string name="bot_1">Talk to our AI Chatbot for 10m to earn 100 points! You can chat about anything related to sustainability and social justice and how they affect each other.</string>
+    <string name="bot_2">(weekly chat not completed yet)</string>
+    <string name="bot_3">Hello! I am your sust.AI.nability chat bot! What would you like to talk about today?</string>
+
 </resources>

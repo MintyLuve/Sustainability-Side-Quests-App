@@ -1,4 +1,4 @@
-package com.fro.recylerewards;
+package com.fro.sustainabilitysidequests;
 
 import android.content.Intent;
 import android.os.Bundle;

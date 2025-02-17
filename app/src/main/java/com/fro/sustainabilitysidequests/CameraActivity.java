@@ -1,4 +1,4 @@
-package com.fro.recylerewards;
+package com.fro.sustainabilitysidequests;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;

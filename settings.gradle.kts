@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "GWC Recycle Rewards"
+rootProject.name = "Sustainability Side Quests"
 include(":app")

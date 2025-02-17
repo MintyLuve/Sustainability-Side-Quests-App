@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.fro.recylerewards"
+    namespace = "com.fro.sustainabilitysidequests"
     compileSdk = 35
 
     defaultConfig {
