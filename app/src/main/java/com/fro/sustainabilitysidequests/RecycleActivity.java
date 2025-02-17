@@ -17,6 +17,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.common.util.concurrent.ListenableFuture;
@@ -29,9 +30,9 @@ public class RecycleActivity extends AppCompatActivity {
 
     private ListenableFuture<ProcessCameraProvider> cameraProviderFuture;
 
-    PreviewView previewView;
+    PreviewView camera;
     ImageCapture imageCapture;
-    Button bCapture;
+    ImageButton takePic;
     Button home;
 
     @Override
@@ -42,10 +43,10 @@ public class RecycleActivity extends AppCompatActivity {
         home = findViewById(R.id.home);
         home.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), MainActivity.class)));
 
-        previewView = findViewById(R.id.previewView);
-        bCapture = findViewById(R.id.bCapture);
+        camera = findViewById(R.id.camera);
+        takePic = findViewById(R.id.takePic);
 
-        bCapture.setOnClickListener(v -> capturePhoto());
+        takePic.setOnClickListener(v -> capturePhoto());
 
         cameraProviderFuture = ProcessCameraProvider.getInstance(this);
         cameraProviderFuture.addListener(() -> {
@@ -69,7 +70,7 @@ public class RecycleActivity extends AppCompatActivity {
                 .build();
         Preview preview = new Preview.Builder()
                 .build();
-        preview.setSurfaceProvider(previewView.getSurfaceProvider());
+        preview.setSurfaceProvider(camera.getSurfaceProvider());
 
         // Image capture use case
         imageCapture = new ImageCapture.Builder()

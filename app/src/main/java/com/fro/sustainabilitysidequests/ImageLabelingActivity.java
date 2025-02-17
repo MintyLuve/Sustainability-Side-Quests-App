@@ -14,7 +14,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.material.button.MaterialButton;
 import com.google.mlkit.vision.common.InputImage;
 import com.google.mlkit.vision.label.ImageLabel;
 import com.google.mlkit.vision.label.ImageLabeler;
@@ -26,7 +25,6 @@ import java.util.List;
 public class ImageLabelingActivity extends AppCompatActivity {
     // Declare global variables here \/
     ImageView imageIv;
-    MaterialButton labelImageBtn;
     TextView resultTv;
     Button button;
 
@@ -39,7 +37,6 @@ public class ImageLabelingActivity extends AppCompatActivity {
 
         // Instantiate variables here \/
         imageIv = findViewById(R.id.imageIv);
-        labelImageBtn = findViewById(R.id.labelImageBtn);
         resultTv = findViewById(R.id.resultTv);
         button = findViewById(R.id.back);
 
@@ -66,6 +63,7 @@ public class ImageLabelingActivity extends AppCompatActivity {
                     public void onSuccess(List<ImageLabel> imageLabels) {
                         // we got labels from image as List<ImageLabel>, now we will get and show detailed info
                         resultTv.setText(" ");
+
                         for (ImageLabel imageLabel: imageLabels){
                             //get the label (cake, mango,, fruit, tree, etc)
                             String text = imageLabel.getText();
