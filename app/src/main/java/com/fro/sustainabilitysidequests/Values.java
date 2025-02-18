@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class Values {
     public static ImageProxy image;
-    public static String completed = "(Weekly chat not completed yet)";
+    public static String completed = "(Did not earn chat points yet for this week)";
     public static boolean clicked = false;
     public static String input = "";
     public static int points = 0;

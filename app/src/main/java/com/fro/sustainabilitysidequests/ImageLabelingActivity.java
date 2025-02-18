@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -97,6 +99,8 @@ public class ImageLabelingActivity extends AppCompatActivity {
 
                             // Adding 10 points
                             Values.points += 10;
+                            Toast.makeText(ImageLabelingActivity.this, "+10 Points", Toast.LENGTH_SHORT).show();
+
                         }
                     }
                 })

@@ -14,7 +14,7 @@ public class ShopActivity extends AppCompatActivity {
     Button recycle;
     Button fnButton;
     Button rblxButton;
-    Button valButton;
+    Button apxButton;
     Button lolButton;
     TextView points;
 
@@ -29,7 +29,7 @@ public class ShopActivity extends AppCompatActivity {
         points = findViewById(R.id.points);
         fnButton = findViewById(R.id.fnButton);
         rblxButton = findViewById(R.id.rblxButton);
-        valButton = findViewById(R.id.valButton);
+        apxButton = findViewById(R.id.valButton);
         lolButton = findViewById(R.id.lolButton);
 
         // Setting points to Values.points
@@ -43,7 +43,7 @@ public class ShopActivity extends AppCompatActivity {
         // Spending points
         fnButton.setOnClickListener(v -> spendPoints());
         rblxButton.setOnClickListener(v -> spendPoints());
-        valButton.setOnClickListener(v -> spendPoints());
+        apxButton.setOnClickListener(v -> spendPoints());
         lolButton.setOnClickListener(v -> spendPoints());
     }
 

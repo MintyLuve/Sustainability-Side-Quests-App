@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class BotActivity extends AppCompatActivity {
@@ -55,10 +57,11 @@ public class BotActivity extends AppCompatActivity {
                     Values.clicked = true;
                     Values.input = input.getText().toString();
                     setMessage(Values.clicked);
-                    Values.completed = "(Weekly chat is completed)";
-                    String text = Values.completed +" +100 Points";
+                    Values.completed = "(Already earned chat points for this week)";
+                    String text = "(Earned chat points for this week) " +" +100 Points";
                     completed.setText(text);
                     Values.points += 100;
+                    Toast.makeText(BotActivity.this, "+100 Points", Toast.LENGTH_SHORT).show();
                 }
                 else if (!Values.clicked) {
                     input.setHint("Please enter text");

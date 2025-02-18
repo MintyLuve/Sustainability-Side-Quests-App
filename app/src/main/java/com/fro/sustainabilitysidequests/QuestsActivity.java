@@ -3,6 +3,8 @@ package com.fro.sustainabilitysidequests;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
+import android.widget.Toast;
+
 import androidx.appcompat.app.AppCompatActivity;
 
 public class QuestsActivity extends AppCompatActivity {
@@ -52,6 +54,7 @@ public class QuestsActivity extends AppCompatActivity {
         if (!Values.arrayList.contains(key)){
             Values.points += 100;
             Values.arrayList.add(key);
+            Toast.makeText(this, "+100 Points", Toast.LENGTH_SHORT).show();
         }
     }
 }
