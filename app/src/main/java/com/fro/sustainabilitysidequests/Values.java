@@ -1,10 +1,6 @@
 package com.fro.sustainabilitysidequests;
 
-
-import android.widget.Button;
-
 import androidx.camera.core.ImageProxy;
-
 import java.util.ArrayList;
 
 public class Values {
