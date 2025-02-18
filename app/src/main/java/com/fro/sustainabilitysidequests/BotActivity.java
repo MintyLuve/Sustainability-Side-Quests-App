@@ -27,7 +27,6 @@ public class BotActivity extends AppCompatActivity {
     TextView yourText;
     TextView completed;
     EditText input;
-    boolean clicked = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,36 +50,45 @@ public class BotActivity extends AppCompatActivity {
 
         // Setting completed to saved value
         completed.setText(Values.completed);
+        setMessage(Values.clicked);
 
         // Mock chatbot
         enter.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!input.getText().toString().isEmpty() && !clicked){
-                    String text = input.getText().toString();
-                    yourText.setText(text);
-                    yourLayout.setVisibility(VISIBLE);
-                    response.setVisibility(VISIBLE);
-
-                    //sets the empty view to have a lower weight
-                    LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
-                            LinearLayout.LayoutParams.MATCH_PARENT,
-                            0,
-                            1.0f
-                    );
-                    placeholder.setLayoutParams(param);
-
-                    clicked = true;
-                    input.setHint("Coming soon!");
+                if (!input.getText().toString().isEmpty() && !Values.clicked){
+                    Values.clicked = true;
+                    Values.input = input.getText().toString();
+                    setMessage(Values.clicked);
                     Values.completed = "(Weekly chat is completed)";
-                    text = Values.completed +" +100 Points";
+                    String text = Values.completed +" +100 Points";
                     completed.setText(text);
                     Values.points += 100;
                 }
-                else if (!clicked) {
+                else if (!Values.clicked) {
                     input.setHint("Please enter text");
                 }
             }
         });
+    }
+
+    public void setMessage(boolean val){
+        if (val){
+            String text = Values.input;
+            yourText.setText(text);
+            yourLayout.setVisibility(VISIBLE);
+            response.setVisibility(VISIBLE);
+
+            //sets the empty view to have a lower weight
+            LinearLayout.LayoutParams param = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    0,
+                    1.0f
+            );
+            placeholder.setLayoutParams(param);
+
+            Values.clicked = true;
+            input.setHint("Coming soon!");
+        }
     }
 }

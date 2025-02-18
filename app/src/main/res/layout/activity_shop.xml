@@ -42,7 +42,7 @@
         android:autoSizeTextType="uniform"
         android:textColor="@color/mid_green"
         android:textAlignment="center"
-        android:text="You Have 1500 Points"/>
+        android:text="You Have 0 Points"/>
 
     <ImageView
         android:layout_width="match_parent"
@@ -79,6 +79,7 @@
                 android:text="100 pts = 70 V-Bucks"
                 android:textColor="@color/mid_green" />
             <Button
+                android:id="@+id/fnButton"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
@@ -115,6 +116,7 @@
                 android:text="100 pts = 40 Robux"
                 android:textColor="@color/mid_green" />
             <Button
+                android:id="@+id/rblxButton"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
@@ -160,6 +162,7 @@
                 android:textAlignment="center"
                 android:textColor="@color/mid_green" />
             <Button
+                android:id="@+id/valButton"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="center"
@@ -195,6 +198,7 @@
                 android:text="100 pts = 70 Riot Points"
                 android:textColor="@color/mid_green" />
             <Button
+                android:id="@+id/lolButton"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:gravity="center"

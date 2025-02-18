@@ -94,6 +94,9 @@ public class ImageLabelingActivity extends AppCompatActivity {
 
                             resultT.append("Type: "+ text +"\n");
                             resultC.append("Confidence: "+ confidence +"\n");
+
+                            // Adding 10 points
+                            Values.points += 10;
                         }
                     }
                 })
