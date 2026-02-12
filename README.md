@@ -1,8 +1,4 @@
 # Sustainability Side Quests
-### Girls Who Code - AI and Sustainability Challenge
-Presentation: [Google Slides Presentation: GWC Sustainability Side Quests](https://docs.google.com/presentation/d/1md2sfEYe9g2FCNN83W71EHUjuPT5UH07jYZnAdZB4J0/edit?usp=sharing)
-
-# What is it?
 An app to help motivate people to recycle by exchanging points for in-game currency of the most popular video games
 
 # Key Features
