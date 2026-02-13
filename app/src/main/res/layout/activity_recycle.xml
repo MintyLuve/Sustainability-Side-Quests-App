@@ -9,7 +9,10 @@
     android:background="@color/light_yellow"
     android:weightSum="8"
     android:orientation="vertical"
-    android:padding="20dp">
+    android:paddingStart="20dp"
+    android:paddingEnd="20dp"
+    android:paddingTop="20dp"
+    android:paddingBottom="50dp">
 
     <ImageView
         android:layout_width="match_parent"

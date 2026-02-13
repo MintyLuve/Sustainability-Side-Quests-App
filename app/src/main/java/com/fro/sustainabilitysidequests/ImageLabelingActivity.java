@@ -1,5 +1,9 @@
 package com.fro.sustainabilitysidequests;
 
+import static android.view.View.GONE;
+import static android.view.View.INVISIBLE;
+import static android.view.View.VISIBLE;
+
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -31,6 +35,8 @@ public class ImageLabelingActivity extends AppCompatActivity {
     ImageView image;
     TextView resultT;
     TextView resultC;
+    TextView resultDetected;
+    TextView points;
     ImageLabeler imageLabeler;
     Button home;
     ImageButton pic;
@@ -45,6 +51,8 @@ public class ImageLabelingActivity extends AppCompatActivity {
         image = findViewById(R.id.image);
         resultT = findViewById(R.id.resultT);
         resultC = findViewById(R.id.resultC);
+        resultDetected = findViewById(R.id.result_detected);
+        points = findViewById(R.id.points_received);
         home = findViewById(R.id.home);
         pic = findViewById(R.id.pic);
         shop = findViewById(R.id.shop);
@@ -88,19 +96,28 @@ public class ImageLabelingActivity extends AppCompatActivity {
                         resultT.setText("");
                         resultC.setText("");
 
-                        for (ImageLabel imageLabel: imageLabels){
+                        for (ImageLabel imageLabel: imageLabels) {
                             //get the label (cake, mango,, fruit, tree, etc)
                             String text = imageLabel.getText();
                             //get confidence score in percentage
-                            float confidence = imageLabel.getConfidence();
+                            float confidence = imageLabel.getConfidence() * 100;
 
-                            resultT.append("Type: "+ text +"\n");
-                            resultC.append("Confidence: "+ confidence +"\n");
+                            resultT.append("Type: " + text + "\n");
+                            resultC.append("Confidence: " + String.format("%.2f", confidence) + "%\n");
 
-                            // Adding 10 points
-                            Values.points += 10;
-                            Toast.makeText(ImageLabelingActivity.this, "+10 Points", Toast.LENGTH_SHORT).show();
+                            if (text.equals("Metal") || text.equals("Paper") || text.equals("Chair")) {
+                                // Adding 10 points
+                                Values.points += 10;
+//                                Toast.makeText(ImageLabelingActivity.this, "+10 Points", Toast.LENGTH_SHORT).show();
+                                resultDetected.setText("Recyclable Detected!");
+                                points.setVisibility(VISIBLE);
+                            }
+                            else {
+//                                Toast.makeText(ImageLabelingActivity.this, "Not recyclable", Toast.LENGTH_SHORT).show();
+                                points.setVisibility(INVISIBLE);
+                                resultDetected.setText("No Recyclables Detected.");
 
+                            }
                         }
                     }
                 })
